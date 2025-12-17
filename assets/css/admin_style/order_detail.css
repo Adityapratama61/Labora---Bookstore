@@ -1,0 +1,268 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fa;
+        }
+        
+        .dashboard-container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 250px;
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #4169E1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .logo-text h2 { font-size: 18px; }
+        .logo-text p { font-size: 12px; color: #999; }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            margin-bottom: 5px;
+            color: #666;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .menu-item:hover {
+            background: #f8f9fa;
+            color: #4169E1;
+        }
+        
+        .menu-item.active {
+            background: #4169E1;
+            color: white;
+        }
+        
+        .menu-item i {
+            font-size: 18px;
+            width: 20px;
+        }
+        
+        .settings-menu {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .main-content {
+            flex: 1;
+            margin-left: 250px;
+            padding: 30px;
+        }
+        
+        .page-header {
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+        
+        .breadcrumb a {
+            color: #4169E1;
+            text-decoration: none;
+        }
+        
+        .page-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .status-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .status-badge.pending { background: #f3f4f6; color: #6b7280; }
+        .status-badge.processing { background: #fef3c7; color: #f59e0b; }
+        .status-badge.shipped { background: #dbeafe; color: #3b82f6; }
+        .status-badge.completed { background: #d1fae5; color: #10b981; }
+        .status-badge.cancelled { background: #fee2e2; color: #ef4444; }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .order-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .order-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-image {
+            width: 60px;
+            height: 80px;
+            border-radius: 6px;
+            object-fit: cover;
+            background: #f3f4f6;
+        }
+        
+        .item-info {
+            flex: 1;
+        }
+        
+        .item-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .item-meta {
+            font-size: 13px;
+            color: #999;
+        }
+        
+        .item-price {
+            text-align: right;
+        }
+        
+        .item-price-single {
+            font-size: 13px;
+            color: #999;
+        }
+        
+        .item-price-total {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .order-summary {
+            padding: 20px 0;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        
+        .summary-row.total {
+            border-top: 2px solid #f3f4f6;
+            margin-top: 10px;
+            padding-top: 15px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .info-row {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            font-size: 13px;
+            color: #999;
+            width: 120px;
+        }
+        
+        .info-value {
+            font-size: 14px;
+            color: #333;
+            flex: 1;
+        }
+        
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: white;
+            color: #666;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .btn-back:hover {
+            background: #f8f9fa;
+        }
+        
+        .btn-print {
+            width: 100%;
+            padding: 12px;
+            background: #4169E1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 15px;
+        }
